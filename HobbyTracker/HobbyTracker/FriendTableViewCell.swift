@@ -21,7 +21,7 @@ class FriendTableViewCell: UITableViewCell {
     
     
     //MARK: step 10
-    //we want to update our labels whenever our friend gets set.
+    //we want to update our labels whenever our friend gets set. it starts off as optional so when it starts it is nil
     var friend: Friend? {
         didSet {
             updateCellView()

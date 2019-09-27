@@ -34,18 +34,24 @@ class FriendsTableViewController: UIViewController {
         friends.append(Friend(name: "Paul", hometown: "Area 51", numberOfHobbies: ["Probing"]))
     }
     
+    
    
     
-
-    /*
+    //MARK: step 12:
+    //build the segue navigation for the AddFriendViewController
+    //we want the destination of the segue, and to set our delegate.
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AddFriendModalSegue" {
+            guard let addFriendVC = segue.destination as? AddFriendViewController else { fatalError() }
+            addFriendVC.delegate = self
+            //does not conform to AddFriendDelegate, there will be an error on line 50 until step 13 is finished
+        }
     }
-    */
+    
 
 }
     //MARK: step 2:
@@ -71,6 +77,19 @@ extension FriendsTableViewController: UITableViewDataSource {
         let friend = friends[indexPath.row]
         cell.friend = friend
         return cell
+    }
+    
+    
+}
+
+    //MARK: step 13
+//build the conformance to AddFriendDelegate. this will make this page take the friend, add it to the TableView and take responsibility. reload the data as well
+extension FriendsTableViewController: AddFriendDelegate {
+    func friendWasCreated(_ friend: Friend) {
+        print("The Friend \(friend) was just created!")
+        friends.append(friend)
+        tableView.reloadData()
+        dismiss(animated: true, completion: nil)
     }
     
     

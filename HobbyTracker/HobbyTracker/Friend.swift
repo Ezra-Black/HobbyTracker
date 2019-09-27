@@ -12,5 +12,5 @@ import Foundation
 struct Friend {
     var name: String
     var hometown: String
-    var numberOfHobbies: [String]
+    var numberOfHobbies: [String] = []
 }
