@@ -6,6 +6,9 @@
 //  Copyright © 2019 Joe Rogers. All rights reserved.
 //
 
+    //MARK: step 14:
+    //control click from every textfield within the main.storyboard, and link it to its own target icon top left of the view. choose delegate. this will give the AddFriendVC the ability to control textfield objects on it's view with code. within the attributes inspector of textfield 1-4, choose "next" under the 'return' keys option. this will change the textfield each time it's clicked. for the 3rd hobby textfield. choose 'done'. this will close the keyboard. This is essentially the same as using FirstResponder (see step 15)
+
 import UIKit
 
     //MARK: step 9:
@@ -65,5 +68,30 @@ class AddFriendViewController: UIViewController {
                }
         
         delegate?.friendWasCreated(friend)
+    }
+}
+
+    //MARK: step 15:
+    //create the extension that will control what the return key does.
+
+extension AddFriendViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, !text.isEmpty {
+            switch textField {
+            case nameTextField:
+                hometownTextfield.becomeFirstResponder()
+            case hometownTextfield:
+                hobby1TextField.becomeFirstResponder()
+            case hobby1TextField:
+                hobby2TextField.becomeFirstResponder()
+            case hobby2TextField:
+            Hobby3TextField.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }else{
+            self.view.endEditing(false )
+        }
+        return false
     }
 }
