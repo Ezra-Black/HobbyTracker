@@ -63,7 +63,7 @@
                                             <outlet property="hobbyCount" destination="JVD-iS-sTM" id="KM0-OT-adh"/>
                                             <outlet property="hometownLabel" destination="738-HB-KO0" id="mCT-QY-vTW"/>
                                             <outlet property="nameLabel" destination="g5S-vj-BsZ" id="F5O-V3-hah"/>
-                                            <segue destination="jIC-5J-HiS" kind="show" id="mRH-xV-u28"/>
+                                            <segue destination="jIC-5J-HiS" kind="show" identifier="ShowFriendDetailSegue" id="mRH-xV-u28"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -261,6 +261,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mEs-BX-dbK"/>
                     </view>
+                    <connections>
+                        <outlet property="hobbyListTextview" destination="QFR-6A-ZVP" id="beY-D7-6u3"/>
+                        <outlet property="hometownLabel" destination="zEK-qp-BSR" id="nMf-Tb-6L4"/>
+                        <outlet property="nameLabel" destination="irO-Wl-bbo" id="Qt7-5S-Uff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJI-PS-KNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

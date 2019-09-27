@@ -19,7 +19,7 @@ class FriendsTableViewController: UIViewController {
     //create a property to store our data that we want to show on the table view
     
     var friends: [Friend] = []
-                           //^ This initilizes the property at runtime as EMPTY.
+    //^ This initilizes the property at runtime as EMPTY.
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: step 6:
@@ -35,27 +35,36 @@ class FriendsTableViewController: UIViewController {
     }
     
     
-   
+    
     
     //MARK: step 12:
     //build the segue navigation for the AddFriendViewController
     //we want the destination of the segue, and to set our delegate.
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddFriendModalSegue" {
+        switch segue.identifier {
+       
+         case "AddFriendModalSegue":
             guard let addFriendVC = segue.destination as? AddFriendViewController else { fatalError() }
             addFriendVC.delegate = self
-            //does not conform to AddFriendDelegate, there will be an error on line 50 until step 13 is finished
+        
+        case "ShowFriendDetailSegue":
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let friendDetailVC = segue.destination as? FriendDetailViewController else {fatalError()}
+            friendDetailVC.friend = friends[indexPath.row]
+            
+        default: fatalError("an unknown segue was encountered \(segue.identifier ?? "<NO ID>")")
         }
     }
     
-
+    
+    
 }
-    //MARK: step 2:
-   //Building our extension which lets us do things with our tableviewCell
+//MARK: step 2:
+//Building our extension which lets us do things with our tableviewCell
 extension FriendsTableViewController: UITableViewDataSource {
     
     
@@ -82,7 +91,7 @@ extension FriendsTableViewController: UITableViewDataSource {
     
 }
 
-    //MARK: step 13
+//MARK: step 13
 //build the conformance to AddFriendDelegate. this will make this page take the friend, add it to the TableView and take responsibility. reload the data as well
 extension FriendsTableViewController: AddFriendDelegate {
     func friendWasCreated(_ friend: Friend) {
