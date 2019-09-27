@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		271AABD622EA904800613A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AABD522EA904800613A5E /* AppDelegate.swift */; };
-		271AABD822EA904800613A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AABD722EA904800613A5E /* ViewController.swift */; };
 		271AABDB22EA904800613A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271AABD922EA904800613A5E /* Main.storyboard */; };
 		271AABDD22EA904900613A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271AABDC22EA904900613A5E /* Assets.xcassets */; };
 		271AABE022EA904900613A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271AABDE22EA904900613A5E /* LaunchScreen.storyboard */; };
+		271CFBC3233DD6BA00526CA6 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271CFBC2233DD6BA00526CA6 /* FriendsTableViewController.swift */; };
+		271CFBC5233DD81400526CA6 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271CFBC4233DD81400526CA6 /* AddFriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		271AABD222EA904800613A5E /* HobbyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		271AABD522EA904800613A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		271AABD722EA904800613A5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		271AABDA22EA904800613A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		271AABDC22EA904900613A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		271AABDF22EA904900613A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		271AABE122EA904900613A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271CFBC2233DD6BA00526CA6 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		271CFBC4233DD81400526CA6 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				271AABD522EA904800613A5E /* AppDelegate.swift */,
-				271AABD722EA904800613A5E /* ViewController.swift */,
 				271AABD922EA904800613A5E /* Main.storyboard */,
 				271AABDC22EA904900613A5E /* Assets.xcassets */,
 				271AABDE22EA904900613A5E /* LaunchScreen.storyboard */,
 				271AABE122EA904900613A5E /* Info.plist */,
+				271CFBC2233DD6BA00526CA6 /* FriendsTableViewController.swift */,
+				271CFBC4233DD81400526CA6 /* AddFriendViewController.swift */,
 			);
 			path = HobbyTracker;
 			sourceTree = "<group>";
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271AABD822EA904800613A5E /* ViewController.swift in Sources */,
+				271CFBC5233DD81400526CA6 /* AddFriendViewController.swift in Sources */,
+				271CFBC3233DD6BA00526CA6 /* FriendsTableViewController.swift in Sources */,
 				271AABD622EA904800613A5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
