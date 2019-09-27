@@ -63,17 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				271AABD522EA904800613A5E /* AppDelegate.swift */,
-				271AABD922EA904800613A5E /* Main.storyboard */,
 				271AABDC22EA904900613A5E /* Assets.xcassets */,
 				271AABDE22EA904900613A5E /* LaunchScreen.storyboard */,
 				271AABE122EA904900613A5E /* Info.plist */,
-				271CFBC2233DD6BA00526CA6 /* FriendsTableViewController.swift */,
-				271CFBC4233DD81400526CA6 /* AddFriendViewController.swift */,
-				271CFBD3233DDC3800526CA6 /* FriendTableViewCell.swift */,
-				271CFBD7233DDC6600526CA6 /* FriendDetailViewController.swift */,
-				271CFBD5233DDC4100526CA6 /* Friend.swift */,
+				271AABD922EA904800613A5E /* Main.storyboard */,
+				271CFBD9233DDE0D00526CA6 /* View Controllers */,
+				271CFBDA233DDE5200526CA6 /* Custom Views */,
+				271CFBDB233DDE6800526CA6 /* Model */,
 			);
 			path = HobbyTracker;
+			sourceTree = "<group>";
+		};
+		271CFBD9233DDE0D00526CA6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				271CFBC2233DD6BA00526CA6 /* FriendsTableViewController.swift */,
+				271CFBC4233DD81400526CA6 /* AddFriendViewController.swift */,
+				271CFBD7233DDC6600526CA6 /* FriendDetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		271CFBDA233DDE5200526CA6 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				271CFBD3233DDC3800526CA6 /* FriendTableViewCell.swift */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		271CFBDB233DDE6800526CA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				271CFBD5233DDC4100526CA6 /* Friend.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
