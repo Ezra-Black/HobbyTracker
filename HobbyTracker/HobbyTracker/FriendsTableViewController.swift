@@ -92,7 +92,7 @@ extension FriendsTableViewController: UITableViewDataSource {
 }
 
     //MARK: step 21:
-    //create the tableViewDelegate Conformance.this will allow us to delete things on the view. 
+    //create the tableViewDelegate Conformance.this will allow us to delete cells on the view.
  
  extension FriendsTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
