@@ -6,6 +6,8 @@
 //  Copyright © 2019 Joe Rogers. All rights reserved.
 //
 
+    //MARK: step 20:
+    //set up the table view delegate to be of FriendsTableViewController. Control click from the tableview in main.storyboard and drag to the top left icon at the top of the view controller it is in. choose delegate.
 import UIKit
 
 class FriendsTableViewController: UIViewController {
@@ -87,9 +89,21 @@ extension FriendsTableViewController: UITableViewDataSource {
         cell.friend = friend
         return cell
     }
-    
-    
 }
+
+    //MARK: step 21:
+    //create the tableViewDelegate Conformance.this will allow us to delete things on the view. 
+ 
+ extension FriendsTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        friends.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+ }
 
 //MARK: step 13
 //build the conformance to AddFriendDelegate. this will make this page take the friend, add it to the TableView and take responsibility. reload the data as well
